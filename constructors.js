@@ -36,10 +36,45 @@ function expect(target) {
 //
 // Only add code to *THIS* section!
 
-// ????????
-// ????????
-// ????????
+var Dog = function(dog){
+  
+  this.color = ""
+  this.hungry = true
+  this.status = 'normal'
+  //this.owner = undefined
 
+  if(dog !== undefined){
+    if(dog.color !== undefined){
+      this.color = dog.color
+ 
+    }
+
+    if(dog.hungry !== undefined){
+      this.hungry = dog.hungry
+    } 
+
+  }
+
+}
+
+var Human = function(person){
+  this.cool = false
+
+  if(person !== undefined){
+    if(person.cool !== undefined){
+      this.cool = person.cool
+    }
+  }
+
+}
+
+Human.prototype.pet = function(dog){
+  dog.status = 'happy'
+}
+
+Human.prototype.feed = function(dog){
+  dog.hungry = false
+}
 
 //        __
 //   ____/ /___  ____ ______
